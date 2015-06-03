@@ -1,0 +1,5 @@
+#/bin/bash
+for i in `cat ./ip/beta`
+do
+    ssh -l root $i "/start/beta " # update
+done

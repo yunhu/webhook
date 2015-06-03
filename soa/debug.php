@@ -1,7 +1,16 @@
 <?php
-header("Content-Type: text/html; charset=UTF-8"); 
-ini_set("display_errors", "On");
-error_reporting(E_ALL | E_STRICT |E_NOTICE |E_WARNING);
+include "../index.php";
+use common;
+$mongo = new common\Mongo();
+$mongo->select_db('soa');
+
+#$mongo->select_collection('soa','user');
+$data = array('stable'=>ip2long('10.0.201.106'), 'bak'=>ip2long('10.0.201.107'), 'beta'=>ip2long('10.0.201.112'), 'type'=>'beta', commit=>'fwfwfafafawfafafafssssa', 'time'=>time());
+#var_dump($mongo->insert('record', $data));
+$res = $mongo->find('record',array('type'=>'beta'),array('sort'=>array('time'=>-1),'limit'=>1));
+var_dump($res);
+die;
+
 include './mongo.php';
 $json = file_get_contents('./bak/tiger.txt');
 $data = json_decode($json,true);
