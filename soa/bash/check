@@ -1,0 +1,5 @@
+#/bin/bash
+for i in `cat ./ip/check`
+do
+    ssh -l root $i "/docker/soa/check" # update
+done

@@ -1,0 +1,5 @@
+#/bin/bash
+for i in `cat ./ip/bak`
+do
+    ssh -l root $i "/start/bak" # update
+done
