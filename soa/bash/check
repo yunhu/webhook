@@ -1,5 +1,5 @@
 #/bin/bash
 for i in `cat ./ip/check`
 do
-    ssh -l root $i "docker stop beta && docker rm beta && docker run -it --name beta -m 500m -v /docker/log/112/swoole9501.log:/home/wwwroot/log/swoole9501.log  keep8 /bin/bash " # update
+    ssh -l root $i "/docker/soa/check" # update
 done
