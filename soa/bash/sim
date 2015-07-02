@@ -1,0 +1,5 @@
+#/bin/bash
+for i in `cat ./ip/sim`
+do
+    ssh -l root $i "cd /www/mbs && git pull origin sim && supervisorctl restart swoole" # update
+done

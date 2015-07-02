@@ -1,0 +1,5 @@
+#/bin/bash
+for i in `cat ./ip/online`
+do
+    ssh -l root $i "cd /catweb/soav4 && git pull origin master && service swoole restart" # update
+done
