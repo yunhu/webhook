@@ -37,6 +37,6 @@ function record($data) {
         return $res->insert($data);
 
 }
-insert(array('name'=>'liuaj','status'=>0));
+insert(array('name'=>'xukm','status'=>0));
 //record(array('stable'=>'10.0.201.106', 'bak'=>'10.0.201.107', 'beta'=>'10.0.201.112', 'type'=>'beta','commit'=>'872b9e251d211280de9a1d9ded5555de99883abe'));
 //type 分为beta,stable,bak

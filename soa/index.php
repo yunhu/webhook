@@ -27,7 +27,7 @@ if(strpos($data['ref'], 'tags')){
 		$user[] = $val['name'];
 	}
         if(!in_array($data['user_name'], $user)){
-                $mongo->insert('errorlog', array('content'=>$json, 'time'=>time(), 'name'=>$user, 'msg'=>'you cant access'));
+                $mongo->insert('errorlog', array('content'=>$json, 'time'=>time(), 'name'=>$data['user_name'], 'msg'=>'you cant access'));
 		return false;
 	}
 

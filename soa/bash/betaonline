@@ -1,5 +1,0 @@
-#/bin/bash
-for i in `cat ./ip/check`
-do
-    ssh -l root $i "docker rename stable stablebak && docker rename beta stable && docker rename bak beta && docker rename stablebak bak " # update
-done

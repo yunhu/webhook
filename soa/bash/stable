@@ -1,5 +1,0 @@
-#/bin/bash
-for i in `cat ./ip/stable`
-do
-    ssh -l root $i "/start/stable " # update
-done
